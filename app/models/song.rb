@@ -8,7 +8,7 @@ class Song < ActiveRecord::Base
 
   def drake_made_this
     # binding.pry
-    Artist.find_by(name: "Drake") || Artist.create(name: "Drake")
+    drake = Artist.find_by(name: "Drake") || Artist.create(name: "Drake")
       self.artist = drake
       drake.songs << self
     # elsif self.artist.name == "Drake"
