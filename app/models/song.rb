@@ -13,7 +13,7 @@ class Song < ActiveRecord::Base
       self.artist = drake
       drake.songs << self
     elsif self.artist.name == "Drake"
-      self
+      self.artist
     else
       self
     end
