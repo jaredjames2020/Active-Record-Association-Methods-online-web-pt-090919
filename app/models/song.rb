@@ -12,10 +12,10 @@ class Song < ActiveRecord::Base
       drake  = Artist.create(name: "Drake")
       self.artist = drake
       drake.songs << self
-    elsif self.artist.name == "Drake"
-      self.artist
+    # elsif self.artist.name == "Drake"
+    #   self.artist
     else
-      self
+      self.artist
     end
     # when this method is called it should assign the song's artist to Drake
     # Drake doesn't exist in the database as an artist yet, so you'll have to create a record
